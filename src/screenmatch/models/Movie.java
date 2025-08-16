@@ -1,6 +1,8 @@
 package screenmatch.models;
 
-public class Movie extends Titles{
+import screenmatch.utils.Classificable;
+
+public class Movie extends Titles implements Classificable {
     public String getDirector() {
         return director;
     }
@@ -17,4 +19,8 @@ public class Movie extends Titles{
     }
 
 
+    @Override
+    public int getClassification() {
+        return (int) getMean() / 5;
+    }
 }

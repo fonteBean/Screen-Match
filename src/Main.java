@@ -1,4 +1,5 @@
 import screenmatch.models.Movie;
+import screenmatch.utils.recomendationsFilter;
 import  screenmatch.utils.timeCalculator;
 
 
@@ -7,6 +8,7 @@ public class Main {
 
     private static final Scanner scanner = new Scanner(System.in);
     private  static timeCalculator calculator = new timeCalculator();
+    private static recomendationsFilter filter = new recomendationsFilter();
     public static void main(String[] args){
         Movie myMovie = new Movie("Castelo Infinito",2025,true,125,"Lazaro");
         myMovie.printTitle();
@@ -16,6 +18,7 @@ public class Main {
         System.out.println(myMovie.getMean());;
         calculator.addTitle(myMovie);
         System.out.println("Calculadora de maratona: " + calculator.getTotalTimer());
+        filter.filter(myMovie);
     }
 
 }

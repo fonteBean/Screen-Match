@@ -1,5 +1,7 @@
 package screenmatch.models;
 
+import screenmatch.utils.Classificable;
+
 public abstract class Titles {
     private String name;
     private int year;
