@@ -16,8 +16,5 @@ public class Movie extends Titles{
         this.director = director;
     }
 
-    @Override
-    public void setDuration() {
 
-    }
 }
