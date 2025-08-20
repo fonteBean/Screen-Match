@@ -10,6 +10,14 @@ public abstract class Titles {
     private int numberOfReviews;
     private int duration;;
 
+    public String getName() {
+        return name;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
     public Titles(String name, int year, boolean included, int duration) {
         this.name = name;
         this.year = year;

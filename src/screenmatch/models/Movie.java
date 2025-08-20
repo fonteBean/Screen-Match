@@ -23,4 +23,9 @@ public class Movie extends Titles implements Classificable {
     public int getClassification() {
         return (int) getMean() / 5;
     }
+
+    @Override
+    public String toString() {
+        return  "Movie: " + getName() + " Ano: " +  getYear();
+    }
 }
