@@ -2,7 +2,7 @@ package screenmatch.models;
 
 import screenmatch.utils.Classificable;
 
-public abstract class Titles {
+public class Titles implements Comparable<Titles> {
     private String name;
     private int year;
     private boolean included;
@@ -25,6 +25,10 @@ public abstract class Titles {
         this.duration = duration;
     }
 
+    @Override
+    public String toString() {
+        return  "Name: " + getName() + " Ano: " +  getYear();
+    }
 
     public int getNumberOfReviews() {
         return numberOfReviews;
@@ -82,4 +86,8 @@ public abstract class Titles {
         return reviewsSum/numberOfReviews;
     }
 
+    @Override
+    public int compareTo(Titles otherTitle) {
+        return this.getName().compareTo(otherTitle.getName());
+    }
 }
